@@ -210,7 +210,7 @@ def send_plot(message):
         # with open('output/plot_info.ogg', 'rb') as f:
         #     bot.send_voice(chat_id, f)
     else:
-        bot.reply_to(chat_id, 'Campaign ID not found. Please try again!')
+        bot.send_message(chat_id, 'Campaign ID not found. Please try again!')
         ask_id_plot(message)
 
 
