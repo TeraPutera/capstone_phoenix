@@ -85,7 +85,7 @@ def ask_id_summary(message):
     markup = telebot.types.ReplyKeyboardMarkup(one_time_keyboard=True)
     for i in unique_campaign:
         markup.add(i)
-    sent = bot.reply_to(message, 'Choose campaign to be summarized:', reply_markup=markup)
+    sent = bot.send_message(chat_id, 'Choose campaign to be summarized:', reply_markup=markup)
 
     bot.register_next_step_handler(sent, send_summary)
 
