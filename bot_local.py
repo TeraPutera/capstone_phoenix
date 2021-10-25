@@ -215,14 +215,14 @@ def send_plot(message):
 
 
 # -------------------- CHECKPOINT 4 --------------------
-# @bot.message_handler(func=lambda message: True)
-# def echo_all(message):
-#     # TO DO: emoji
-#     with open('template_text/default.txt', mode='r', encoding='utf-8') as f:
-#         temp = Template(f.read())
-#         default = temp.substitute(EMOJI = emoji.emojize(":victory_hand::beaming_face_with_smiling_eyes:"))
+@bot.message_handler(func=lambda message: True)
+def echo_all(message):
+    # TO DO: emoji
+    with open('template_text/default.txt', mode='r', encoding='utf-8') as f:
+        temp = Template(f.read())
+        default = temp.substitute(EMOJI = emoji.emojize(":victory_hand::beaming_face_with_smiling_eyes:"))
         
-    # bot.reply_to(message, default)
+    bot.reply_to(message, default)
 
 if __name__ == "__main__":
     bot.polling()
